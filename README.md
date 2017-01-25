@@ -9,12 +9,12 @@ gem 'autocompl'
 
 application.js
 ```
-//= require auto-complete
+//= require autocompl
 ```
 
 application.css
 ```
-*= require auto-complete
+*= require autocompl
 ```
 
 routes
