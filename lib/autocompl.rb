@@ -1,9 +1,9 @@
 require 'autocompl/engine'
-require 'autocompl/definder'
+require 'autocompl/base'
 
 module Autocompl
 end
 
 class ActionController::Base
-  include Autocompl::Definder
+  include Autocompl::Base
 end

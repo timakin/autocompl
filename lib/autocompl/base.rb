@@ -1,9 +1,9 @@
 require 'autocompl/repository'
 
 module Autocompl
-  module Definder
+  module Base
     def self.included(target)
-      target.extend Autocompl::Definder::ClassMethods
+      target.extend Autocompl::Base::ClassMethods
       target.send :include, Autocompl::Repository
     end
 
