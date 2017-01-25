@@ -2,7 +2,8 @@ Autocompl
 ====
 
 Autocompl is the light-weight library that provides an autocomplete function to Rails app.
-This gem depends on Vanilla JavaScript, not jquery. (See the repo of [autoComplete](https://github.com/Pixabay/JavaScript-autoComplete))
+This gem depends on Vanilla JavaScript, not jquery.
+See the repo of [autoComplete](https://github.com/Pixabay/JavaScript-autoComplete) to check the usage of javascript code.
 
 ## Installation
 
@@ -56,7 +57,7 @@ class ProductsController < ApplicationController
 end
 ```
 
-Finally, write the JavaScript code and HTML to generate an autocomplete form.
+Finally, write the javascript code and HTML to generate an autocomplete form.
 
 ```
 # products.js
