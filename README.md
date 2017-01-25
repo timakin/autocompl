@@ -28,6 +28,6 @@ products_controller.rb
 ```
 class ProductsController < ApplicationController
   # This will define `autocomplete_endpoint` to ProductsController.
-  autocomplete product: [:name, :title], maker: :name
+  autocomplete product: :name, maker: [:name_ja, :name_en]
 end
 ```

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Makers</h1>
+
+<form onsubmit="return false;" class="pure-form" style="border-top: 1px solid #eee;border-bottom:1px solid #eee;background:#fafafa;margin:30px 0;padding:20px 10px;text-align:center">
+    <input id="hero-demo" autofocus type="text" name="maker_index_form" placeholder="Programming languages ..." style="width:100%;max-width:600px;outline:0">
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name ja</th>
+            <th>Name en</th>
+            <th colspan="3"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @makers.each do |maker| %>
+        <tr>
+            <td><%= maker.name_ja %></td>
+            <td><%= maker.name_en %></td>
+            <td><%= link_to 'Show', maker %></td>
+            <td><%= link_to 'Edit', edit_maker_path(maker) %></td>
+            <td><%= link_to 'Destroy', maker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Maker', new_maker_path %>

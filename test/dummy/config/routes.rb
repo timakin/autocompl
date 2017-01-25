@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :makers do
+    get 'autocomplete_endpoint', on: :collection
+  end
 
-  mount Autocompl::Engine => "/autocompl"
+  resources :products do
+    get 'autocomplete_endpoint', on: :collection
+  end
 end

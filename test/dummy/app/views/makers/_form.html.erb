@@ -1,0 +1,27 @@
+<%= form_for(maker) do |f| %>
+  <% if maker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(maker.errors.count, "error") %> prohibited this maker from being saved:</h2>
+
+      <ul>
+      <% maker.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name_ja %>
+    <%= f.text_field :name_ja %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name_en %>
+    <%= f.text_field :name_en %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

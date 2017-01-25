@@ -1,0 +1,8 @@
+source 'http://rubygems.org'
+
+gem 'rails', '~> 5.0.0'
+
+gem 'database_cleaner'
+gem 'autocompl', path: '../../'
+gem 'sqlite3-ruby', require: 'sqlite3'
+gem 'jquery-rails'
