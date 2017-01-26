@@ -2,7 +2,9 @@ Autocompl
 ====
 
 Autocompl is the light-weight library that provides an autocomplete function to Rails app.
+
 This gem depends on Vanilla JavaScript, not jquery.
+
 See the repo of [autoComplete](https://github.com/Pixabay/JavaScript-autoComplete) to check the usage of javascript code.
 
 ## Installation
@@ -38,6 +40,7 @@ And, add it to your app/assets/stylesheets/application.css file
 As an example, let's configure for embed an autocomplete to search `Product#name`.
 
 At first, edit `routes.rb` to let your javascript to access to the database.
+
 For an example, if you'd like to add an endpoint to `ProductsController`, write down this code.
 
 ```
@@ -84,6 +87,7 @@ $(document).ready(function() {
 ```
 
 In addition, if you'd search with product `maker` name, that was internationalized with `name_ja` and `name_en` columns,
+
 rewrite your `products_controller.rb` like this.
 
 ```
@@ -92,4 +96,19 @@ class ProductsController < ApplicationController
   autocomplete product: :name, maker: [:name_ja, :name_en]
   ...
 end
+```
+
+## Options
+
+If you want to cache the results of the autocomplete candidates,
+
+just add this settings to your `application.rb` or `config/initializers/{filename}.rb`.
+
+```
+...
+# Enable to cache the results.
+config.cache_autocomplete = true
+# Set the duration of a cache expiration.
+config.autocomplete_cache_expire = 30.minutes
+...
 ```
