@@ -1,5 +1,6 @@
 require 'autocompl/engine'
 require 'autocompl/base'
+require 'autocompl/railtie'
 
 module Autocompl
 end

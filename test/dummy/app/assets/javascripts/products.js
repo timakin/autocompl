@@ -4,6 +4,7 @@
 $(document).ready(function() {
   new autoComplete({
       selector: 'input[name="q"]',
+      minChars: 1,
       source: function(term, response){
           $.getJSON('/products/autocomplete_endpoint', { term: term }, function(data){
             term = term.toLowerCase();

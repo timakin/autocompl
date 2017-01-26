@@ -3,6 +3,7 @@
 $(document).ready(function() {
   new autoComplete({
       selector: 'input[name="maker_index_form"]',
+      minChars: 1,
       source: function(term, response){
           $.getJSON('/makers/autocomplete_endpoint', { term: term }, function(data){
             term = term.toLowerCase();

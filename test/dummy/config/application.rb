@@ -3,7 +3,7 @@ require File.expand_path('../boot', __FILE__)
 require 'rails/all'
 
 Bundler.require(*Rails.groups)
-require "autocompl"
+require 'autocompl'
 
 module Dummy
   class Application < Rails::Application
@@ -21,6 +21,7 @@ module Dummy
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.cache_autocomplete = true
+    config.autocomplete_cache_expire = 3.minutes
   end
 end
-
