@@ -97,18 +97,3 @@ class ProductsController < ApplicationController
   ...
 end
 ```
-
-## Options
-
-If you want to cache the results of the autocomplete candidates,
-
-just add this settings to your `application.rb` or `config/initializers/{filename}.rb`.
-
-```
-...
-# Enable to cache the results.
-config.cache_autocomplete = true
-# Set the duration of a cache expiration.
-config.autocomplete_cache_expire = 30.minutes
-...
-```
